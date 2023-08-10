@@ -58,6 +58,22 @@ class CircularLinkedList:
             current_node.setNext(new_node)
             new_node.setNext(self.head)
             self.head = new_node
+    
+     def insetAtEnd(self,data):
+        newNode=Node()
+        newNode.setData(data)
+        newNode.setNext(newNode)
+        
+        if self.head is None:
+            self.head = newNode()
+        else:
+            current_node = self.head
+            while current_node.getNext() is not self.head:
+                current_node = current_node.getNext()
+            current_node.setNext(newNode)
+            newNode.setNext(self.head)
+                
+            
 
         
         
