@@ -74,7 +74,7 @@ class LinkedList:
                 current_node = current_node.getNext()
             new_node.setNext(current_node.getNext())
             current_node.setNext(new_node)
-            self.length += 1
+        self.length += 1
 
     def deleteFromBeginingInLinkedList(self):
         if self.head is None:
